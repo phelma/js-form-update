@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>form-submit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <form action="" id="form">
+      <select name="" id="cam-select">
+        <option value="cam1">Camera 1</option>
+        <option value="cam2">Camera 2</option>
+        <option value="cam3">Camera 3</option>
+        <option value="cam4">Camera 4</option>
+      </select>
+
+      Pan: <input type="range" min="0" max="1000" id="input-pan" />
+      Tilt: <input type="range" min="0" max="1000" id="input-tilt" />
+      Zoom: <input type="range" min="0" max="1000" id="input-zoom" />
+
+      <button id="submit-btn">Submit</button>
+    </form>
+
+    <pre id="out"></pre>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
