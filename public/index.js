@@ -87,7 +87,8 @@ var setState = function(state) {
 
 var sendState = function(state) {
   console.log('sending', state);
-  ajax({url: '/api/camera/' + state.camId, method: 'POST', body: state}, function(status, res) {
+  var string = 'camId=' + state.camId + '&pan=' + state.pan + '&tilt=' + state.tilt + '&zoom=' + state.zoom;
+  ajax({url: '/api/camera/' + state.camId, method: 'POST', body: string}, function(status, res) {
     var state = JSON.parse(res);
     console.log('got', state);
   })

@@ -57,7 +57,9 @@ app.get('/api/camera/:id', function(req, res, rej) {
 });
 
 app.post('/api/camera/:id', function(req, res, rej) {
-  state[req.query.camId] = req.query;
+  console.log(req.body);
+  state[req.params.id] = req.body;
+  console.log(state);
   res.json({
     status: 'ok',
     camId: req.params.id,
